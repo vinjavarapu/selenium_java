@@ -1,0 +1,28 @@
+package Varibles;
+
+public class Employee {
+
+	   // salary  variable is a private static variable
+	
+	   public int number = 20;
+	   private static double salary;
+	   
+	   public void greet() {
+		   
+		   System.out.println("Hello");
+	   }
+
+	   // DEPARTMENT is a constant
+	   public static final String DEPARTMENT = "Development ";
+
+	   public static void main(String args[]) {
+		   
+	       Employee e = new Employee();
+		   salary = 1000;
+	      System.out.println(DEPARTMENT + "average salary:" + salary);
+	      e.number = e.number+40;
+	     System.out.println(e.number);
+	     
+	     e.greet();
+	      
+	   }}

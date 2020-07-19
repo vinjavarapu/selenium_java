@@ -1,0 +1,22 @@
+package Methods;
+
+public class staticmethod {
+	
+	public static String greetperson() {
+		
+		int time = 20;
+		String greet = " Hello Good morning";
+		if(time<20)
+		{
+			System.out.println(greet);
+		}
+		return greet;
+	}
+	
+	public static void main(String args[])
+	{
+		
+	    greetperson();
+	}
+
+}

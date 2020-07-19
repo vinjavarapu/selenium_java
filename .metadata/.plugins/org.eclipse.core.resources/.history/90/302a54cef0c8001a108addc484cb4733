@@ -1,0 +1,32 @@
+package Varibles;
+
+public class Class1 {
+	
+	
+	
+	static int number =10;
+
+	
+	public void method1() {
+		
+		int number =10;
+		number = number*2;
+		System.out.println("Local varible value of int is " + number);
+	}
+			
+			
+
+	public static void main(String[] args) {
+		
+		Class1 obj = new Class1();
+		
+		obj.method1();
+		
+		System.out.println("The global varible value of number is " + number);
+		
+		
+		// TODO Auto-generated method stub
+
+	}
+
+}
