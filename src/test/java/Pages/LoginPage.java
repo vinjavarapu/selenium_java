@@ -16,17 +16,25 @@ public class LoginPage  {
         this.driver = driver;
     }
 
-    public void enterUsername() {
+    public void enterWrongUsername() {
 
         driver.findElement(username).sendKeys("test");
     }
-    public void enterPassword() {
+    public void enterWrongPassword() {
 
         driver.findElement(password).sendKeys("test");
     }
     public void ClickLoginButton() {
 
         driver.findElement(LoginButton).click();
+    }
+    public void enterUsername() {
+
+        driver.findElement(username).sendKeys("mngr271710");
+    }
+    public void enterPassword() {
+
+        driver.findElement(password).sendKeys("Uqesasy");
     }
 
 }
