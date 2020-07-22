@@ -30,6 +30,27 @@ public class Configreader {
         String chromepath = pro.getProperty("chromepath");
         return chromepath;
     }
+    public String GetUserName() {
+
+        String username = pro.getProperty("username");
+        return username;
+    }
+    public String GetPassword() {
+
+        String password = pro.getProperty("username");
+        return password;
+    }
+
+    public String GetWrongUsername() {
+        String username_invalid = pro.getProperty("username_invalid");
+        return username_invalid;
+
+    }
+    public String GetWrongPassword() {
+
+        String password_invalid = pro.getProperty("password_invalid");
+        return password_invalid;
+    }
 
 
 

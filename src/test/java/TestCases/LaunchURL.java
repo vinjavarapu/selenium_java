@@ -1,6 +1,7 @@
 package TestCases;
 
 import Pages.LoginPage;
+import Utility.Configreader;
 import Utility.Screenshots;
 import org.testng.annotations.Test;
 
@@ -10,12 +11,14 @@ public class LaunchURL extends BaseClass {
 
     LoginPage login;
 
+
     @Test(priority=1)
     public void loginTest() throws InterruptedException, IOException {
 
-        driver.get(baseURL);
+        driver.get(reader.GetApplicationURL());
         driver.manage().window().maximize();
          login = new LoginPage(driver);
+        Configreader reader = new Configreader();
         login.enterWrongUsername();
         Screenshots.Screenshot(driver,"ravi");
         login.enterWrongPassword();
@@ -28,9 +31,9 @@ public class LaunchURL extends BaseClass {
 
     }
     @Test(priority=2)
-    public void validLogin() {
+    public void validLogin() throws IOException {
 
-        driver.get(baseURL);
+        driver.get(reader.GetApplicationURL());
         login = new LoginPage(driver);
         login.enterUsername();
         login.enterPassword();
@@ -38,6 +41,16 @@ public class LaunchURL extends BaseClass {
 
 
     }
+    @Test(priority=3)
+    public void ResetLogin() throws IOException {
+
+        driver.get(reader.GetApplicationURL());
+        login = new LoginPage(driver);
+        login.enterUsername();
+        login.enterPassword();
+        login.ClickResetButton();
+    }
+
 }
 
 
