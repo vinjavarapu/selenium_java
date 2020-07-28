@@ -6,6 +6,7 @@ import Utility.Screenshots;
 import org.testng.annotations.Test;
 
 import java.io.IOException;
+import java.util.concurrent.TimeUnit;
 
 public class LaunchURL extends BaseClass {
 
@@ -23,6 +24,7 @@ public class LaunchURL extends BaseClass {
         Screenshots.Screenshot(driver,"ravi");
         login.enterWrongPassword();
         login.ClickLoginButton();
+        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 
         driver.switchTo().alert().accept();
 

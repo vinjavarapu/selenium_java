@@ -2,6 +2,7 @@ package TestCases;
 
 
 import Utility.Configreader;
+import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.AfterMethod;
@@ -19,7 +20,7 @@ public class BaseClass {
 
         reader = new Configreader();
 
-        System.setProperty("webdriver.chrome.driver",reader.GetChromePath());
+         WebDriverManager.chromedriver().setup();
          driver = new ChromeDriver();
 
     }
